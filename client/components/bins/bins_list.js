@@ -11,7 +11,9 @@ class BinsList extends Component {
     return this.props.bins.map( bin => {
       return (
         <li className="list-group-item" key={bin._id}>
-          {bin._id}
+          <span className="pull-left binid">
+            {bin._id}
+          </span>
           <span className="pull-right">
             <button className="btn btn-danger" onClick={() => this.onBinRemove(bin)}>Remove</button>
           </span>

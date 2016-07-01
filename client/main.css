@@ -6,3 +6,11 @@
   color: #777;
   text-decoration: none;
 }
+
+.list-group-item {
+  height: 55px;
+}
+
+.binid {
+  padding: 8px;
+}

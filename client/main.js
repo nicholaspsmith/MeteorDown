@@ -1,9 +1,17 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
 import App from './components/app'
 import { Bins } from '../imports/collections/bins'
 
+const routes = (
+  <Router history={browserHistory}>
+    <Route path="/" component={App}>
+    </Route>
+  </Router>
+)
+
 Meteor.startup( () => {
-  ReactDOM.render(<App/>, document.getElementById('app'))
+  ReactDOM.render(routes, document.getElementById('app'))
 })
