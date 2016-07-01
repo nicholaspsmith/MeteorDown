@@ -9,7 +9,7 @@ class BinsEditor extends Component {
 
   render() {
     return (
-      <div className="col-xs-8">
+      <div className="col-sm-8">
         <h5>input...</h5>
         <CodeMirror
           value={this.props.bin.content}
