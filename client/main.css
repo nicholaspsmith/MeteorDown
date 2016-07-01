@@ -1,0 +1,8 @@
+#login-buttons {
+  margin: 18px;
+}
+#login-buttons a {
+  font-size: 14px;
+  color: #777;
+  text-decoration: none;
+}

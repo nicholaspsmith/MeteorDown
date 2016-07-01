@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
+import Accounts from './accounts'
 
 class Header extends Component {
+  onBinClick(e) {
+    e.preventDefault()
+
+    Meteor.call('bins.insert')
+  }
+
   render() {
     return (
       <nav className="nav navbar-default">
@@ -9,10 +16,10 @@ class Header extends Component {
         </div>
         <ul className="nav navbar-nav">
           <li>
-            <a href="#">Sign Up</a>
+            <Accounts/>
           </li>
           <li>
-            <a href="#">Create Bin</a>
+            <a href="#" onClick={this.onBinClick.bind(this)}>Create Bin</a>
           </li>
         </ul>
       </nav>
